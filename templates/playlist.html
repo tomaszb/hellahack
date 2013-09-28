@@ -1,0 +1,11 @@
+
+
+{% block body %}
+<div class="listofsongs">
+	<body>
+		{% for link in links %}
+			<a href="{{links[link]}}">{{link}}</a><br>
+		{% endfor %}
+	</body>
+</div>
+{% endblock %}
