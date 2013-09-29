@@ -63,9 +63,9 @@
         
         R.player.on("change:playState", function(state) {
           if (state === R.player.PLAYSTATE_PLAYING || state === R.player.PLAYSTATE_BUFFERING) {
-            $play.text("pause");
+            //$play.text("pause");
           } else {
-            $play.text("play");
+            //$play.text("play");
           }
         });
         

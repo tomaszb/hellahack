@@ -116,10 +116,10 @@ html{
   text-decoration: none;
 }
 #controls {
-  
+
 }
 #map {
-  width: 744px;
+  width: 850px;
   float: left;
   overflow: hidden;
   height: 2733px;
@@ -181,7 +181,7 @@ html{
 #logo{
     background: url("/static/img/logo.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 58px;
-    margin-left: 125px;
+    margin-left: 40px;
     margin-right: 140px;
     width: 170px;
 }
@@ -202,6 +202,7 @@ html{
   background: #e74c3d;
   opacity: .9;
   position: absolute;
+  margin-left: 0px;
 }
 #controls button{
     border: none;

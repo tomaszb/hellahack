@@ -1,0 +1,11 @@
+body{
+	background-image: url("/static/img/fbcover.jpg")
+}
+
+body #signin{
+	position: absolute;
+	margin-top: 550px;
+	margin-left: 985px;
+	width: 250px;
+	height: 60px;
+}
