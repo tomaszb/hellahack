@@ -83,7 +83,7 @@
         });
       });
 
-      var map = L.map('map').setView([37.8044, -122.2708], 12);
+      map = L.map('map').setView([37.794305,-122.271784], 16);
 
       // add an OpenStreetMap tile layer
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -91,8 +91,8 @@
       }).addTo(map);
 
 
-      getLocations();
-      setInterval(getLocations, 30000);
+      Main.getLocations();
+      setInterval(Main.getLocations, 30000);
 
     }, 
     
@@ -159,12 +159,13 @@
 
     getLocations: function () {
       $.ajax({
-        'url' : 'http://172.26.76.32:5000/songList/latest',
+        'url' : 'http://172.26.76.32:5000/songlist/latest',
         'method' : 'GET',
         success:function(data){
-          $.each(data, function (location) {
-            L.marker([location.lat, location.lon]).addTo(map)
-                .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+          console.log(data);
+          $.each(data.items, function (key, location) {
+            L.marker([location.lat,location.lng]).addTo(map)
+                .bindPopup("User: " + location.userid + "<br>" + "Artist: " + location.albumname + "<br>" + "Artist: " + location.artist)
                 .openPopup();
           });
         }

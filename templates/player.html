@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/rdio-utils.css">
     <link rel="stylesheet" type="text/css" href="../static/css/main.css">
     <link rel="stylesheet" type="text/css" href="../static/leaflet-0.6.4/leaflet.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,100' rel='stylesheet' type='text/css'>
     <!-- Register your app at http://www.rdio.com/developers/create/ and replace client_id below with yours  -->
     <script src="//www.rdio.com/api/api.js?client_id=g9i2ZgQIqpvP1dmguehIxw"></script>
 
@@ -31,28 +31,51 @@
     </script>
   </head>
   <body>
-    <div class="header">
-      <div class="section">
-        <img class="icon">
-      </div>
-      <div class="section">
-        <button class="play">play</button>
-        <button class="next">next</button>
-        <button class="prev">previous</button>
-      </div>
-      <div class="section">
-        <div class="track label">Not Playing</div>
-        <div class="album-title label"></div>
-        <div class="artist label"></div>
+    <div id="toolBar">
+      <div id="logo">&nbsp;</div>
+      <form class="search">
+            <input type="text"/>
+            <button type="submit">SEARCH YO' BEATS</button>
+            <div class="error"></div>
+      </form>
+      <div id="userName">Stephanie Horvilleur</div>
+      <div id="icons">
+              <div id="avatar"><a href="#"><img src="../static/img/steph-icon.jpg"></a></div>
+              <a href="#"><img src="../static/img/facebook-icon.png"></a>
+              <a href="#"><img src="../static/img/twitter-icon.png"></a>
       </div>
     </div>
-    <form class="search">
-      Enter an artist or album name: 
-      <input type="text"/>
-      <button type="submit">Search</button>
-      <div class="error"></div>
-    </form>
-    <div class="results"></div>
-    <div id="map"></div>
+    <div id="leftNav">
+        <div class="header">
+          <div class="section">
+            <img class="icon" id="playingIcon">
+            <div class="section" id="controls">
+              <button class="prev">&nbsp;</button>
+              <button class="play">&nbsp;</button>
+              <button class="next">&nbsp;</button>
+          </div>
+          </div>
+          <div class="section">
+            <div class="track label">Not Playing</div>
+            <div class="album-title label"></div>
+            <div class="artist label"></div>
+          </div>
+        </div>
+      <div class="results"></div>
+      <div id="myHood">
+        <p>MY HOOD</p>
+      </div>
+      <div id="chatText">
+        <p><span>Stephanie:</span>  Sup Tomest none of my hommiez like the Lovemakers want to go see them with me at the fox theater. 
+        <br>
+        <span>Tomest:</span> WHATTTT SUPPP GRRRULL YEEE I WANNA GO</p>
+      </div>
+      <div id="chat">
+        <p>WHAT UP &mdash; YO!</p>
+      </div>
+    </div>
+    <div id="test"></div>
+  <!--<div id="mapArea">&nbsp;</div>-->
+    <div id="map"></div> 
   </body>
 </html>

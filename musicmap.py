@@ -6,7 +6,7 @@ app = Flask('musicmap')
 
 @app.route("/")
 def index():
-	return render_template("player.html")
+	return render_template("welcome.html")
 
 @app.route("/playlist/", methods=['POST'])
 def playlist():
@@ -27,6 +27,7 @@ def player():
 def hello():
 	return render_template("hello.html")
 
+@app.route("/player/helper.html")
 @app.route("/helper.html")
 def helper():
 	return render_template("helper.html")
@@ -41,8 +42,9 @@ def newalbum():
 	key_str = str(request.form['key'])
 	artist_str = str(request.form['artist'])
 	album_str = str(request.form['album'])
-	long_str = "43.5444"
-	lat_str = "65.4323"
+	[37.810835,-122.265908]
+	long_str = "-122.265908"
+	lat_str = "37.81"
 
 	payload = {'albumname':album_str,'artist':artist_str, 'userid':user_str,'lat':lat_str, 'lng':long_str}
 	r = requests.post('http://172.26.76.32:5000/songlist/add',data=payload)

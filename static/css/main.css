@@ -1,13 +1,20 @@
+
+html{
+  font-family: 'Lato', sans-serif;
+  background: #212121;
+  min-width: 1260px;
+}
 /* --------- */
 .header {
   overflow: hidden;
   padding: 10px;
-  background: #ddd;
+  background: #212121;
+  height: 130px;
 }
 
 .header .section {
   float: left;
-  margin: 0 20px 0 0;
+  margin: 0 20px 0 15px;
 }
 
 .header .icon {
@@ -16,50 +23,62 @@
 }
 
 .header button {
-  display: block;
+  display: inline;
   margin: 0 0 10px 0;
 }
 
 .header .label {
   margin: 0 0 10px 0;
+  color:#ffffff;
 }
 
 /* --------- */
 .search {
-  padding: 10px;
+  background:#e74c3d;
+  height: 45px;
+  margin-top: 7px;
 }
 
 /* --------- */
 .results {
-  padding: 10px;
+  padding: 10px 0 0 25px;
   text-align: center;
 }
 
 .album {
   display: inline-block;
   position: relative;
-  margin: 0 20px 20px 0;
-  width: 200px;
+  margin: 0 30px 20px 0;
+  width: 160px;
   height: 240px;
+  text-align: left;
 }
 
 .album .icon {
-  width: 200px;
-  height: 200px;
+  width: 157px;
+  height: 157px;
   margin: 0 0 4px 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .album .label {
-  text-align: center;
   height: 1.3em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color:#ffffff;
+  width: 159px;
+  font-size: 16.5px;
 }
 
 .album .artist {
-  color: #555;
+  color: #ffffff;
+}
+.album .artist.label, .album-title.label, .artist.label{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+  text-transform: uppercase;
 }
 
 .album .buttons {
@@ -76,7 +95,7 @@
 .album .btn {
   padding: 10px;
   margin-top: 65px;
-  margin-left: 32px;
+  margin-left: 18px;
   width: 80%;
   background: rgba(255, 255, 255, 0.85);
   cursor: pointer;
@@ -96,12 +115,154 @@
 .album a.btn:active {
   text-decoration: none;
 }
-
-
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+#controls {
+  
 }
+#map {
+  width: 744px;
+  float: left;
+  overflow: hidden;
+  height: 2733px;
+}
+#leftNav{
+  width:420px;
+  float:left;
+  padding-left:15px;
+  background: #212121;
+}
+#mapArea{
+  width: 744px;
+  float: left;
+  overflow: hidden;
+  background: url("/static/img/map_fpo.jpg") repeat;
+  height: 2733px;
+}
+.search input{
+  padding-left: 15px;
+  color:#c9c9c9;
+}
+.search input, .search button{
+  height: 47px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  border:none;
+  margin-top: -5px;
+}
+.search button{
+    background: none repeat scroll 0 0 #212121;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 0px 32px 0 16px;
+    height: 50px;
+    margin-right: 20px;
+}
+#map{
+  float: left;
+}
+#icons{
+}
+#icons img{
+  margin-right: 25px;
+  opacity: .8;
+  transition-duration: 0.5s;
+}
+#icons img:hover{
+  opacity: 1;
+}
+#avatar{
+  float: left;
+}
+#toolBar{
+    background: none repeat scroll 0 0 #e74c3d;
+    padding-top: 11px;
+    width: 100%;
+    height: 65px;
+}
+#logo{
+    background: url("/static/img/logo.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 58px;
+    margin-left: 125px;
+    margin-right: 140px;
+    width: 170px;
+}
+#toolBar * {
+  float: left;
+}
+#userName{
+  color: #ffffff;
+  padding-top: 15px;
+  margin-right: 20px;
+}
+
+.track.label, .album-title.label{
+  text-transform: uppercase;
+  width: 230px;
+}
+#controls{
+  background: #e74c3d;
+  opacity: .9;
+  position: absolute;
+}
+#controls button{
+    border: none;
+    height:21px;
+    width: 21px;
+    margin-left: 10px;
+}
+button.play{
+  background: url("/static/img/play.png")no-repeat;
+}
+button.next{
+  background: url("/static/img/forward.png")no-repeat;
+}
+button.prev{
+  background: url("/static/img/rewind.png")no-repeat;
+}
+button.pause{
+  background: url("/static/img/pause.png")no-repeat;
+}
+#myHood{
+  background: #000000;
+  text-align: center;
+  padding: 15px 0px;
+}
+#myHood p{
+    background: url("/static/img/myHood.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    font-weight: 700;
+    height: 25px;
+    margin: 0 0 0 140px;
+    padding-left: 40px;
+    padding-top: 6px;
+    text-align: left;
+}
+#chat{
+  background: #e74c3d;
+  text-align: center;
+  padding: 0px;
+}
+#chat p{
+    background: url("/static/img/chat.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    font-weight: 700;
+    height: 40px;
+    margin: 0 0 0 101px;
+    padding-left: 82px;
+    padding-top: 20px;
+    text-align: left;
+}
+#chatText{
+  color: #bcbcbc;
+  background: #ffffff;
+  padding: 10px;
+}
+#chatText span{
+  color: #e74c3d
+}
+#chatText p {
+  margin: 0px;
+}
+
+
+
+

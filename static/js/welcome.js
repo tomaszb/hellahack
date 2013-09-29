@@ -1,31 +1,15 @@
-  (function() {
+	R.ready(function() { // just in case the API isn't ready yet
+	//  if (R.authenticated() == true){
+	// 	window.location.href = "/player/";
+		$("#signin").click(function() {
+			if (R.authenticated() == false){
+				R.authenticate(function () {
 
-  window.Main = {
-    // ----------
-    init: function() {
-  $(document).ready(function() {
-    Main.init();
-  });
-  
-})(); /*globals R, Main, Modernizr, rdioUtils */
+					document.location.href = "/player/";
+				});
+			} else {
+				document.location.href = "/player/";
+			}
+		});
 
-(function() {
-
-  window.Main = {
-    // ----------
-    init: function() {
-    if (R.authenticated == false){
-    	R.authenticate()
-    }
-
-    //window.location = 
-
-
-  };
-  
-  // ----------
-  $(document).ready(function() {
-    Main.init();
-  });
-  
-})();  
+	});
